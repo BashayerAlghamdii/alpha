@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" onKeyPressed="#deleteKey" onMouseClicked="#delete" prefHeight="400.0" prefWidth="650.0" style="-fx-background-color: #E4FFB7;" stylesheets="@sbt.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.GameController">
+   <children>
+      <HBox alignment="BASELINE_LEFT" layoutX="535.0" layoutY="14.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="58.0" prefWidth="120.0">
+         <children>
+            <Button fx:id="hintBtn" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#hint" style="-fx-background-radius: 100; -fx-background-color: #E4FFB7;">
+               <graphic>
+                  <ImageView fitHeight="51.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/chat.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="settingBtn" mnemonicParsing="false" prefHeight="50.0" prefWidth="43.0" style="-fx-background-radius: 100; -fx-background-color: #E4FFB7;">
+               <graphic>
+                  <ImageView fitHeight="51.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../Downloads/s.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </HBox>
+      <Button fx:id="btn" alignment="BASELINE_LEFT" contentDisplay="CENTER" layoutX="452.0" layoutY="153.0" mnemonicParsing="false" onAction="#check" prefHeight="37.0" prefWidth="39.0" style="-fx-background-radius: 100; -fx-background-color: #E4FFB7;">
+         <graphic>
+            <ImageView fitHeight="31.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../Downloads/unnamed.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <TextArea fx:id="ansarea" editable="false" layoutX="186.0" layoutY="142.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="58.0" prefWidth="253.0" style="-fx-background-color: #f5f3f7; -fx-border-color: #ae00ff; -fx-border-width: 2.5;" />
+      <Label fx:id="QLabel" layoutX="153.0" layoutY="12.0" prefHeight="121.0" prefWidth="382.0" textAlignment="CENTER">
+         <font>
+            <Font name="Comic Sans MS" size="14.0" />
+         </font>
+      </Label>
+      <Pane layoutX="28.0" layoutY="183.0" prefHeight="200.0" prefWidth="600.0">
+         <children>
+            <ImageView fitHeight="30.0" fitWidth="29.0" layoutX="8.0" layoutY="172.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../Downloads/icons8-important-note-50.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="qletter" layoutX="100.0" layoutY="36.0" mnemonicParsing="false" onAction="#qaction" prefHeight="32.0" prefWidth="33.0" style="-fx-background-radius: 100; -fx-background-color: #FF1188;" text="Q" textAlignment="CENTER">
+               <font>
+                  <Font name="Calibri" size="20.0" />
+               </font>
+            </Button>
+            <Button fx:id="aletter" layoutX="121.0" layoutY="73.0" mnemonicParsing="false" onAction="#aaction" prefHeight="32.0" prefWidth="33.0" style="-fx-background-radius: 100; -fx-background-color: #FF1188;" text="A" textAlignment="CENTER">
+               <font>
+                  <Font name="Calibri" size="20.0" />
+               </font>
+            </Button>
+            <Button fx:id="zletter" layoutX="140.0" layoutY="110.0" mnemonicParsing="false" onAction="#zaction" prefHeight="32.0" prefWidth="33.0" style="-fx-background-radius: 100; -fx-background-color: #FF1188;" text="Z" textAlignment="CENTER">
+               <font>
+                  <Font name="Calibri" size="20.0" />
+               </font>
+            </Button>
+            <Button fx:id="wletter" layoutX="136.0" layoutY="36.0" mnemonicParsing="false" onAction="#waction" prefHeight="37.0" prefWidth="46.0" style="-fx-background-radius: 100; -fx-background-color: #ff6600;" text="W" textAlignment="CENTER">
+               <font>
+                  <Font name="Calibri" size="20.0" />
+               </font>
+            </Button>
+            <Button fx:id="sletter" layoutX="159.0" layoutY="73.0" mnemonicParsing="false" onAction="#saction" prefHeight="32.0" prefWidth="33.0" style="-fx-background-radius: 100; -fx-background-color: #ff6600;" text="S" textAlignment="CENTER">
+               <font>
+                  <Font name="Calibri" size="20.0" />
+               </font>
+            </Button>
+            <Button layoutX="176.0" layoutY="110.0" mnemonicParsing="false" onAction="#xaction" prefHeight="32.0" prefWidth="33.0" style="-fx-background-radius: 100; -fx-background-color: #ff6600;" text="X" textAlignment="CENTER" fx:id="xletter">
+               <font>
+                  <Font name="Calibri" size="20.0" />
+               </font>
+            </Button>
+            <Button fx:id="eletter" layoutX="177.0" layoutY="36.0" mnemonicParsing="false" onAction="#eaction" prefHeight="32.0" prefWidth="33.0" style="-fx-background-radius: 100; -fx-background-color: #FFCE3B;" text="E" textAlignment="CENTER">
+               <font>
+                  <Font name="Calibri" size="20.0" />
+               </font>
+            </Button>
+            <Button fx:id="dletter" layoutX="193.0" layoutY="73.0" mnemonicParsing="false" onAction="#daction" prefHeight="32.0" prefWidth="33.0" style="-fx-background-radius: 100; -fx-background-color: #FFCE3B;" text="D" textAlignment="CENTER">
+               <font>
+                  <Font name="Calibri" size="20.0" />
+               </font>
+            </Button>
+            <Button fx:id="cletter" layoutX="212.0" layoutY="110.0" mnemonicParsing="false" onAction="#caction" prefHeight="32.0" prefWidth="33.0" style="-fx-background-radius: 100; -fx-background-color: #FFCE3B;" text="C" textAlignment="CENTER">
+               <font>
+                  <Font name="Calibri" size="20.0" />
+               </font>
+            </Button>
+            <Button fx:id="rletter" layoutX="214.0" layoutY="36.0" mnemonicParsing="false" onAction="#raction" prefHeight="32.0" prefWidth="33.0" style="-fx-background-radius: 100; -fx-background-color: #8fce00;" text="R" textAlignment="CENTER">
+               <font>
+                  <Font name="Calibri" size="20.0" />
+               </font>
+            </Button>
+            <Button fx:id="fletter" layoutX="230.0" layoutY="73.0" mnemonicParsing="false" onAction="#faction" prefHeight="32.0" prefWidth="33.0" style="-fx-background-radius: 100; -fx-background-color: #8fce00;" text="F" textAlignment="CENTER">
+               <font>
+                  <Font name="Calibri" size="20.0" />
+               </font>
+            </Button>
+            <Button fx:id="vletter" layoutX="248.0" layoutY="110.0" mnemonicParsing="false" onAction="#vaction" prefHeight="32.0" prefWidth="33.0" style="-fx-background-radius: 100; -fx-background-color: #8fce00;" text="V" textAlignment="CENTER">
+               <font>
+                  <Font name="Calibri" size="20.0" />
+               </font>
+            </Button>
+            <Button fx:id="tletter" layoutX="251.0" layoutY="36.0" mnemonicParsing="false" onAction="#taction" prefHeight="32.0" prefWidth="33.0" style="-fx-background-radius: 100; -fx-background-color: #0092ff;" text="T" textAlignment="CENTER">
+               <font>
+                  <Font name="Calibri" size="20.0" />
+               </font>
+            </Button>
+            <Button fx:id="gletter" layoutX="265.0" layoutY="73.0" mnemonicParsing="false" onAction="#gaction" prefHeight="32.0" prefWidth="33.0" style="-fx-background-radius: 100; -fx-background-color: #0092ff;" text="G" textAlignment="CENTER">
+               <font>
+                  <Font name="Calibri" size="20.0" />
+               </font>
+            </Button>
+            <Button fx:id="bletter" layoutX="285.0" layoutY="110.0" mnemonicParsing="false" onAction="#baction" prefHeight="32.0" prefWidth="33.0" style="-fx-background-radius: 100; -fx-background-color: #0092ff;" text="B" textAlignment="CENTER">
+               <font>
+                  <Font name="Calibri" size="20.0" />
+               </font>
+            </Button>
+            <Button fx:id="yletter" layoutX="286.0" layoutY="36.0" mnemonicParsing="false" onAction="#yaction" prefHeight="32.0" prefWidth="33.0" style="-fx-background-radius: 100; -fx-background-color: #ae00ff;" text="Y" textAlignment="CENTER">
+               <font>
+                  <Font name="Calibri" size="20.0" />
+               </font>
+            </Button>
+            <Button fx:id="hletter" layoutX="304.0" layoutY="73.0" mnemonicParsing="false" onAction="#haction" prefHeight="32.0" prefWidth="33.0" style="-fx-background-radius: 100; -fx-background-color: #ae00ff;" text="H" textAlignment="CENTER">
+               <font>
+                  <Font name="Calibri" size="20.0" />
+               </font>
+            </Button>
+            <Button fx:id="nletter" layoutX="322.0" layoutY="110.0" mnemonicParsing="false" onAction="#naction" prefHeight="32.0" prefWidth="33.0" style="-fx-background-radius: 100; -fx-background-color: #ae00ff;" text="N" textAlignment="CENTER">
+               <font>
+                  <Font name="Calibri" size="20.0" />
+               </font>
+            </Button>
+            <Button fx:id="uletter" layoutX="323.0" layoutY="36.0" mnemonicParsing="false" onAction="#uaction" prefHeight="32.0" prefWidth="33.0" style="-fx-background-radius: 100; -fx-background-color: #FF1188;" text="U" textAlignment="CENTER">
+               <font>
+                  <Font name="Calibri" size="20.0" />
+               </font>
+            </Button>
+            <Button fx:id="jletter" layoutX="342.0" layoutY="73.0" mnemonicParsing="false" onAction="#jaction" prefHeight="32.0" prefWidth="33.0" style="-fx-background-radius: 100; -fx-background-color: #FF1188;" text="J" textAlignment="CENTER">
+               <font>
+                  <Font name="Calibri" size="20.0" />
+               </font>
+            </Button>
+            <Button fx:id="mletter" layoutX="362.0" layoutY="110.0" mnemonicParsing="false" onAction="#maction" prefHeight="36.0" prefWidth="45.0" style="-fx-background-radius: 100; -fx-background-color: #FF1188;" text="M" textAlignment="CENTER">
+               <font>
+                  <Font name="Calibri" size="20.0" />
+               </font>
+            </Button>
+            <Button fx:id="iletter" layoutX="362.0" layoutY="36.0" mnemonicParsing="false" onAction="#iaction" prefHeight="32.0" prefWidth="33.0" style="-fx-background-radius: 100; -fx-background-color: #ff6600;" text="I" textAlignment="CENTER">
+               <font>
+                  <Font name="Calibri" size="20.0" />
+               </font>
+            </Button>
+            <Button fx:id="kletter" layoutX="375.0" layoutY="73.0" mnemonicParsing="false" onAction="#kaction" prefHeight="32.0" prefWidth="33.0" style="-fx-background-radius: 100; -fx-background-color: #ff6600;" text="K" textAlignment="CENTER">
+               <font>
+                  <Font name="Calibri" size="20.0" />
+               </font>
+            </Button>
+            <Button fx:id="oletter" layoutX="395.0" layoutY="36.0" mnemonicParsing="false" onAction="#oaction" prefHeight="32.0" prefWidth="33.0" style="-fx-background-radius: 100; -fx-background-color: #FFCE3B;" text="O" textAlignment="CENTER">
+               <font>
+                  <Font name="Calibri" size="20.0" />
+               </font>
+            </Button>
+            <Button fx:id="lletter" layoutX="411.0" layoutY="73.0" mnemonicParsing="false" onAction="#laction" prefHeight="32.0" prefWidth="33.0" style="-fx-background-radius: 100; -fx-background-color: #FFCE3B;" text="L" textAlignment="CENTER">
+               <font>
+                  <Font name="Calibri" size="20.0" />
+               </font>
+            </Button>
+            <Button fx:id="pletter" layoutX="434.0" layoutY="36.0" mnemonicParsing="false" onAction="#paction" prefHeight="32.0" prefWidth="33.0" style="-fx-background-radius: 100; -fx-background-color: #8fce00;" text="P" textAlignment="CENTER">
+               <font>
+                  <Font name="Calibri" size="20.0" />
+               </font>
+            </Button>
+            <Label layoutX="37.0" layoutY="175.0" text="Right click on the background to make it darker for eye comfort" textFill="#b54399">
+               <font>
+                  <Font name="Comic Sans MS" size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Label fx:id="lvlLabel" alignment="TOP_LEFT" layoutX="14.0" layoutY="136.0" prefHeight="47.0" prefWidth="120.0" textFill="#5ea8c4">
+         <font>
+            <Font name="Comic Sans MS" size="33.0" />
+         </font>
+      </Label>
+      <Button fx:id="nq" layoutX="14.0" layoutY="33.0" mnemonicParsing="false" onAction="#NEXT" style="-fx-background-color: #E4FFB7; -fx-background-radius: 100;">
+         <graphic>
+            <ImageView fitHeight="74.0" fitWidth="74.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../Downloads/next.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="btntest" alignment="BOTTOM_CENTER" layoutX="14.0" layoutY="33.0" mnemonicParsing="false" onAction="#btnclicked" prefHeight="55.0" prefWidth="75.0" style="-fx-background-color: #E4FFB7; -fx-background-radius: 100;" textAlignment="CENTER">
+         <graphic>
+            <ImageView fitHeight="86.0" fitWidth="74.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../Downloads/start-button.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </ImageView>
+         </graphic>
+      </Button>
+      <ImageView fx:id="m1" fitHeight="307.0" fitWidth="338.0" focusTraversable="true" layoutX="159.0" layoutY="-335.0" mouseTransparent="true" opacity="0.38" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../Downloads/close.png" />
+         </image>
+         <effect>
+            <Shadow blurType="GAUSSIAN">
+               <color>
+                  <Color red="1.0" opacity="0.6709956526756287" />
+               </color>
+            </Shadow>
+         </effect>
+      </ImageView>
+      <ImageView fx:id="m2" fitHeight="307.0" fitWidth="338.0" focusTraversable="true" layoutX="159.0" layoutY="-335.0" mouseTransparent="true" opacity="0.38" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../Downloads/check.png" />
+         </image>
+         <effect>
+            <Shadow blurType="GAUSSIAN">
+               <color>
+                  <Color green="1.0" blue="0.11372549086809158" opacity="0.6700000166893005" />
+               </color>
+            </Shadow>
+         </effect>
+      </ImageView>
+      <ImageView fx:id="m3" fitHeight="307.0" fitWidth="338.0" focusTraversable="true" layoutX="159.0" layoutY="-335.0" mouseTransparent="true" opacity="0.38" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../Downloads/close.png" />
+         </image>
+         <effect>
+            <Shadow blurType="GAUSSIAN">
+               <color>
+                  <Color red="1.0" opacity="0.6709956526756287" />
+               </color>
+            </Shadow>
+         </effect>
+      </ImageView>
+      <ImageView fx:id="m4" fitHeight="307.0" fitWidth="338.0" focusTraversable="true" layoutX="159.0" layoutY="-335.0" mouseTransparent="true" opacity="0.38" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../Downloads/check.png" />
+         </image>
+         <effect>
+            <Shadow blurType="GAUSSIAN">
+               <color>
+                  <Color green="1.0" blue="0.11372549086809158" opacity="0.6700000166893005" />
+               </color>
+            </Shadow>
+         </effect>
+      </ImageView>
+      <ImageView fx:id="m5" fitHeight="307.0" fitWidth="338.0" focusTraversable="true" layoutX="159.0" layoutY="-335.0" mouseTransparent="true" opacity="0.38" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../Downloads/close.png" />
+         </image>
+         <effect>
+            <Shadow blurType="GAUSSIAN">
+               <color>
+                  <Color red="1.0" opacity="0.6709956526756287" />
+               </color>
+            </Shadow>
+         </effect>
+      </ImageView>
+      <ImageView fx:id="m6" fitHeight="307.0" fitWidth="338.0" focusTraversable="true" layoutX="159.0" layoutY="-335.0" mouseTransparent="true" opacity="0.38" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../Downloads/check.png" />
+         </image>
+         <effect>
+            <Shadow blurType="GAUSSIAN">
+               <color>
+                  <Color green="1.0" blue="0.11372549086809158" opacity="0.6700000166893005" />
+               </color>
+            </Shadow>
+         </effect>
+      </ImageView>
+      <ImageView fx:id="m7" fitHeight="307.0" fitWidth="338.0" focusTraversable="true" layoutX="159.0" layoutY="-335.0" mouseTransparent="true" opacity="0.38" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../Downloads/close.png" />
+         </image>
+         <effect>
+            <Shadow blurType="GAUSSIAN">
+               <color>
+                  <Color red="1.0" opacity="0.6709956526756287" />
+               </color>
+            </Shadow>
+         </effect>
+      </ImageView>
+      <ImageView fx:id="m8" fitHeight="307.0" fitWidth="338.0" focusTraversable="true" layoutX="159.0" layoutY="-335.0" mouseTransparent="true" opacity="0.38" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../Downloads/check.png" />
+         </image>
+         <effect>
+            <Shadow blurType="GAUSSIAN">
+               <color>
+                  <Color green="1.0" blue="0.11372549086809158" opacity="0.6700000166893005" />
+               </color>
+            </Shadow>
+         </effect>
+      </ImageView>
+      <ImageView fx:id="image" fitHeight="96.0" fitWidth="120.0" layoutX="523.0" layoutY="75.0" pickOnBounds="true" preserveRatio="true" />
+      <Button fx:id="coverBtn" layoutX="523.0" layoutY="75.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="131.0" prefWidth="128.0" style="-fx-background-color: #E4FFB7;" visible="false" />
+      <Button fx:id="cover" disable="true" mnemonicParsing="false" prefHeight="400.0" prefWidth="655.0" style="-fx-background-color: black;" visible="false" />
+      <Button fx:id="back" layoutX="193.0" layoutY="79.0" mnemonicParsing="false" onAction="#backAction" prefHeight="207.0" prefWidth="240.0" style="-fx-background-radius: 600; -fx-background-color: black;" visible="false">
+         <graphic>
+            <ImageView fitHeight="231.0" fitWidth="272.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../Downloads/back.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>
